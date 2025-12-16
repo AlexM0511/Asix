@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Consolas, monospace;
+}
+
+body {
+  min-height: 100vh;
+  background: #0a0c10;
+  display: grid;
+  place-items: center;
+  color: #dcdcdc;
+}
+
+.archive {
+  padding: 40px;
+}
+
+/* =========================
+   ARCHIVO
+========================= */
+.file {
+  position: relative;
+  width: 560px;
+  padding: 40px;
+  background: #11151c;
+  border-left: 4px solid #ff4757;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   SELLO
+========================= */
+.seal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ff4757;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   CABECERA
+========================= */
+.file-head h1 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.file-head p {
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+.file-content p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.file-content ul {
+  list-style: square;
+  margin-left: 20px;
+}
+
+.file-content li {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   META
+========================= */
+.file-meta {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(255,255,255,0.2);
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.file-footer {
+  margin-top: 30px;
+}
+
+.file-footer a {
+  color: #ff4757;
+  text-decoration: none;
+  font-weight: 700;
+}

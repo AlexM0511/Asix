@@ -1,0 +1,144 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0e0f12, #050608);
+  display: grid;
+  place-items: center;
+  color: #e4e4e4;
+}
+
+.scene {
+  padding: 40px;
+}
+
+.hero-card {
+  position: relative;
+  width: 520px;
+  padding: 32px;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(145deg, #151820, #0b0d12),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.02) 0,
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+
+  box-shadow: 0 40px 80px rgba(0,0,0,0.7);
+
+  /* IMPORTANTE: nunca altura fija */
+  height: auto;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  column-gap: 28px;
+}
+
+.status {
+  position: absolute;
+  top: 18px;
+  right: -42px;
+  transform: rotate(45deg);
+  background: #2e86de;
+  padding: 6px 64px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.hero-left {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* AVATAR CORRECTO */
+.sigil {
+  width: 96px;
+  height: 96px;
+  border: 2px solid #2e86de;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #0b0d12;
+}
+
+.sigil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 1;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-name {
+  font-size: 2rem;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.hero-role {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 14px;
+}
+
+.hero-lore {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.75;
+
+  /* CLAVE: nunca cortar texto */
+  overflow: visible;
+}
+
+.invoke {
+  margin-top: 24px;
+  align-self: flex-start;
+
+  padding: 12px 26px;
+  border: 1px solid #2e86de;
+  color: #2e86de;
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto hover */
+.invoke::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(46,134,222,0.25);
+  transform: translateX(-100%);
+}
+
+.invoke:hover::after {
+  transform: translateX(0);
+  transition: transform 0.4s ease;
+}
+
+.mark {
+  position: absolute;
+  bottom: 18px;
+  left: 22px;
+  font-size: 1.5rem;
+  opacity: 0.25;
+  pointer-events: none;
+}
